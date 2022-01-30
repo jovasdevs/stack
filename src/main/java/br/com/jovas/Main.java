@@ -1,24 +1,32 @@
 package br.com.jovas;
 
 
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
 
-        Stack<Carro> stackCarros = new Stack<>();
+        Queue<Carro> queueCarros = new LinkedList<>();
 
-        stackCarros.push(new Carro("Ford"));
-        stackCarros.push(new Carro("Alfa Romeu"));
-        stackCarros.push(new Carro("Kia"));
+        queueCarros.add(new Carro("Kia"));
+        queueCarros.add(new Carro("Ferrari"));
+        queueCarros.add(new Carro("Fiat"));
+        queueCarros.add(new Carro("Alfa Romeu"));
 
-        System.out.println(stackCarros);
-        System.out.println(stackCarros.pop());
-        System.out.println(stackCarros);
+        System.out.println(queueCarros.add(new Carro("Gurgel")));
+        System.out.println(queueCarros);
 
+        System.out.println(queueCarros.offer(new Carro("Ford")));
+        System.out.println(queueCarros);
 
-        System.out.println(stackCarros.peek());
-        System.out.println(stackCarros);
-        System.out.println(stackCarros.isEmpty());
+        System.out.println(queueCarros.peek());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.poll());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.isEmpty());
+        System.out.println(queueCarros);
     }
 }
